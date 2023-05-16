@@ -10,6 +10,7 @@ body{
 
 #drag-drop-table {
     border-collapse: collapse;
+    text-align: center;
 }
 
 #drag-drop-table td {
