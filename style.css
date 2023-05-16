@@ -1,0 +1,57 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+#drag-drop-table {
+    border-collapse: collapse;
+}
+
+#drag-drop-table td {
+    width: 100px;
+    height: 100px;
+}
+
+#undo-button {
+    margin-top: 10px;
+}
+.b1 {
+    background-color: red;
+}
+
+.b2{
+    background-color: blue;
+}
+
+.b3 {
+    background-color: green;
+}
+.b4 {
+    background-color: rgb(9, 253, 180);
+}
+
+.b5 {
+    background-color: rgb(255, 0, 221);
+}
+
+.b6 {
+    background-color: rgb(67, 15, 237);
+}
+.b7{
+    background-color: rgb(255, 251, 0);
+}
+
+.b8 {
+    background-color: rgb(170, 0, 255);
+}
+
+.b9 {
+    background-color: rgb(8, 186, 245);
+}
+
+
