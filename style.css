@@ -8,6 +8,36 @@ body{
     border: 1px solid black;
 }
 
+
+#add {
+    margin-bottom: 20px;
+    /* Button background color */
+    background-color: #4CAF50;
+    
+    /* Button text color */
+    color: white;
+    
+    /* Button padding */
+    padding: 10px 20px;
+    
+    /* Button border */
+    border: none;
+    
+    /* Button border radius */
+    border-radius: 4px;
+    
+    /* Button cursor style */
+    cursor: pointer;
+    
+    /* Button hover effect */
+    transition: background-color 0.3s ease;
+  }
+  
+  #add:hover {
+    background-color: #45a049;
+  }
+
+
 #drag-drop-table {
     border-collapse: collapse;
     text-align: center;
