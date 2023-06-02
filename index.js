@@ -50,7 +50,7 @@ function addRow(){
 
 // Function to handle drag start event
 function dragStart(event) {
-    console.log("drag started");
+    //console.log("drag started");
     event.dataTransfer.setData('text/plain', event.target.id);
     event.target.style.opacity = '0.4';
 }
@@ -80,9 +80,9 @@ function drop(event) {
         
 
         sourceBox.className = destinationBgClass;
-        console.log(sourceBgClass,destinationBgClass);
+        //console.log(sourceBgClass,destinationBgClass);
         destinationBox.className = sourceBgClass;
-        console.log(sourceBox, destinationBox);
+        //console.log(sourceBox, destinationBox);
 
         // Update the last action
         lastAction = {
@@ -95,7 +95,7 @@ function drop(event) {
 
     // Reset box opacity
     sourceBox.style.opacity = '1';
-    console.log(lastAction)
+    //console.log(lastAction)
 }
 sourceBox.style.opacity = '1';
 
