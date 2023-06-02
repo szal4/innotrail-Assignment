@@ -12,10 +12,45 @@ boxes.forEach(function(box) {
 
 // Add event listener to the undo button
 var undoButton = document.getElementById('undo-button');
+var addButton = document.getElementById('add');
 undoButton.addEventListener('click', undoLastAction);
+addButton.addEventListener('click', addRow);
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function addRow(){
+    var table = document.getElementById("drag-drop-table");
+    var newRow = table.insertRow(table.rows.length);
+    var totalBoxes = (table.rows.length-1)*3;
+    var count = (table.rows.length-1)*3*100;
+    totalBoxes++;
+    count+=100;
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    var cell3 = newRow.insertCell(2);
+
+    cell1.innerHTML =  '<div class="box b'+ totalBoxes +'" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)"  ondrop="drop(event)" id="box-'+count+ '">'+count+'</div>';
+    document.getElementById("box-"+count).style.backgroundColor = getRandomColor();
+    totalBoxes
+    count+=100;
+    cell2.innerHTML = '<div class="box b'+ totalBoxes +'" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)"  ondrop="drop(event)" id="box-'+count+ '">'+count+'</div>';
+    document.getElementById("box-"+count).style.backgroundColor = getRandomColor();
+    totalBoxes
+    count+=100;
+    cell3.innerHTML = '<div class="box b'+ totalBoxes +'" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)"  ondrop="drop(event)" id="box-'+count+ '">'+count+'</div>';
+    document.getElementById("box-"+count).style.backgroundColor = getRandomColor();
+}
 
 // Function to handle drag start event
 function dragStart(event) {
+    console.log("drag started");
     event.dataTransfer.setData('text/plain', event.target.id);
     event.target.style.opacity = '0.4';
 }
